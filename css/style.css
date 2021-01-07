@@ -1,0 +1,321 @@
+/*********** general ***********/
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600;700;900&display=swap");
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
+}
+
+.mar-top-110 {
+  margin-top: 110px;
+}
+
+nav,
+.nav-item .nav-link,
+.book-now a,
+.next,
+.prev,
+.submit {
+  transition: all 0.5s ease-in-out;
+}
+
+.box-shadow {
+  box-shadow: 0 0 10px 10px #157fdd3d;
+}
+
+.logo {
+  max-height: 80px;
+  margin: 5px 0;
+}
+
+.text-darkblue {
+  color: #143151;
+}
+
+.bold-900 {
+  font-weight: 900;
+}
+
+.bold-700 {
+  font-weight: 700;
+}
+
+.bold-600 {
+  font-weight: 600;
+}
+
+.bold-400 {
+  font-weight: 400;
+}
+
+.bold-300 {
+  font-weight: 300;
+}
+
+.text-shadow-black {
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.568);
+}
+
+.text-sky {
+  color: #4396e6;
+}
+
+.background-sky {
+  background-color: #4396e6;
+}
+
+.white-text {
+  color: white;
+}
+
+.book-now a:hover,
+.next:hover,
+.prev:hover,
+.submit:hover {
+  background: transparent;
+  color: #4396e6 !important;
+  border: 1px solid #4396e6;
+}
+
+/*********** start navbar ***********/
+
+.top-nav {
+  background-image: linear-gradient(to right, #172b42, #0a8cc4);
+  border-top: 2px solid #4396e6;
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    display: none !important;
+  }
+
+  .nav-item {
+    text-align: center;
+  }
+
+  .nav-link {
+    border-bottom: none !important;
+  }
+}
+
+.nav-link {
+  font-size: 1.2em;
+  display: inline-block;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.568);
+}
+
+.nav-item.active .nav-link {
+  color: #4396e6 !important;
+  border-bottom: 2px solid #4396e6;
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+.top-nav a:hover {
+  color: #4396e6 !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*********** start carousel ***********/
+
+.carousel {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-item {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: inherit;
+  width: 100%;
+}
+
+.carousel-indicators li {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+}
+
+.carousel-indicators {
+  flex-direction: column;
+  top: 0;
+  left: unset;
+  margin-right: 5%;
+}
+
+.carousel-indicators li.active {
+  background-color: #4396e6;
+}
+
+.carousel-inner {
+  height: inherit;
+}
+
+.carousel-item.one {
+  background-image: url(../images/carousel.jpg) !important;
+}
+
+.carousel-item.two {
+  background-image: url(../images/carousel1.jpg) !important;
+}
+
+.carousel-item.three {
+  background-image: url(../images/carousel2.jpg) !important;
+}
+
+.carousel-item.four {
+  background-image: url(../images/carousel3.jpg) !important;
+}
+
+.carousel-item.active {
+  display: flex;
+}
+
+/*********** start services ***********/
+
+img.services {
+  position: absolute;
+  top: calc(100vh - 78px);
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  border: 7px solid white;
+}
+
+.service {
+  width: 250px;
+  overflow: hidden;
+  height: 250px;
+
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front img {
+  max-height: 150px;
+}
+
+.service:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  border: 1px solid dodgerblue;
+  color: #143151;
+}
+
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/*********** start book now ***********/
+
+.book-now {
+  background-image: url(../images/book-now.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 350px;
+}
+
+.book-now a {
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 1.4em;
+  border: none;
+}
+
+/*********** start booking form ***********/
+
+.booking-form {
+  background-image: url(../images/booking-form.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.form-body {
+  background: white;
+  border-radius: 10px;
+}
+
+.next,
+.prev,
+.submit {
+  background-color: #4396e6;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+/*********** start scroll to top button ***********/
+
+#button {
+  display: inline-block;
+  background-color: #4396e6;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: all 0.5 ease-in-out;
+  font-size: 1.8em;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #134f86;
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
